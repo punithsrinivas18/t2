@@ -1,5 +1,5 @@
 <template>
-  <form class="container" @submit.prevent="login">
+  <form class="container" @submit="login">
       {{error}}
       <div class="field">
         <p class="control has-icons-left has-icons-right">

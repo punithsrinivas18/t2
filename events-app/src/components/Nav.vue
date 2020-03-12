@@ -15,7 +15,7 @@
       <router-link to="/" class="navbar-item">Home</router-link>
       <router-link to="/about" class="navbar-item">About</router-link>
       <router-link to="/" class="navbar-item">Diet Plan</router-link>
-      <router-link to="/" class="navbar-item">Office Hours</router-link>
+      <router-link to="/" class="navbar-item">Working Hours</router-link>
       <router-link to="/" class="navbar-item">Help</router-link>
 
     </div>

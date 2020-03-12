@@ -1,5 +1,5 @@
 <template>
-  <form class="container" @submit.prevent="signup">
+  <form class="container" @submit="signup">
       {{error}}
       <div class="field">
         <p class="control has-icons-left has-icons-right">
@@ -43,7 +43,7 @@ export default {
     },
     methods: {
         
-             login() {
+             signup() {
                 if(this.input.username != "" && this.input.password != "") {
                     if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
                         this.$emit("authenticated", true);
