@@ -23,7 +23,7 @@
         <div class="field">
         <p class="control">
             <button class="button is-success">
-            Login
+            Signup
             </button>
         </p>
         </div>
