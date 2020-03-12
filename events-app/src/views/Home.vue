@@ -4,10 +4,12 @@
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
-          Welcome to the Fitness Fight     
+          Welcome to Fitness Fight     
         </h1>
           <div class="button-block">
-          <button class="button is-xl is-dark">Exercises</button>
+          <button class="button is-xl is-dark">
+          <strong>Let's Begin</strong>
+          </button>
         </div>
       </div>
     </div>
