@@ -35,14 +35,6 @@
         </div>
 
         <div class="field">
-        <p class="control has-icons-left">
-            <input class="input" type="confirm password" placeholder="Cofirm Password" v-model="confirmpassword">
-            <span class="icon is-small is-left">
-            <i class="fas fa-lock"></i>
-            </span>
-        </p>
-        </div>
-        <div class="field">
         <p class="control">
             <button class="button is-success">
             Login
@@ -53,7 +45,7 @@
 </template>
 
 <script>
-import { SignUp} from "../models/users1";
+import { SignUp} from "../models/Users1";
 
 export default {
     data(){
@@ -61,7 +53,6 @@ export default {
             email: '',
             name: '',
             password: '',
-            confirmpassword: '',
             error: ''
         }
     },

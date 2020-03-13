@@ -1,7 +1,7 @@
 
 const Users1 = [
-    { Name: 'Punith', Password: '2020', Email: 'punith@newpaltz.edu', confirmpassword: '2020' },
-    { Name: 'Bracha', Password: '5780', Email: 'chabad@newpaltz.edu', confirmpassword: '5780' },
+    { Name: 'Punith', Password: '2020', Email: 'punith@newpaltz.edu',},
+    { Name: 'Bracha', Password: '5780', Email: 'chabad@newpaltz.edu',},
     
 ];
 
@@ -15,7 +15,7 @@ export function signup(email, name, password) {
     const u1 = Users1.find(x => x.Name == name);
     if(!u1) throw Error('User not found');
     if(use.Password != password) throw Error('Wrong Password');
-    if(use.confirmpassword != password) throw Error('Wrong Password');
+    
 
     return CurrentUser = use;
 }
