@@ -1,5 +1,5 @@
 <template>
-  <form class="container" @submit="login">
+  <form class="container" @submit.prevent="login">
       {{error}}
       <div class="field">
         <p class="control has-icons-left has-icons-right">
@@ -22,7 +22,7 @@
         </div>
         <div class="field">
         <p class="control">
-            <button class="button is-success">
+            <button class="button is-dark">
             Login
             </button>
         </p>
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-//import { Login } from "../models/Users";
+import { Login } from "../models/users";
 
 export default {
     data(){
@@ -42,21 +42,18 @@ export default {
         }
     },
     methods: {
-        
-             login() {
-                if(this.input.username != "" && this.input.password != "") {
-                    if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
-                        this.$emit("authenticated", true);
-                        this.$router.replace({ name: "secure" });
-                    } else {
-                        console.log("The username and / or password is incorrect");
-                    }
-                } else {
-                    console.log("A username and password must be present");
-                }
+        login(){
+            try {
+                Login(this.email, this.password);
+                this.$router.push('/about');
+            } catch (error) {
+                this.error = error;
             }
         }
     }
+    
+
+}
 </script>
 
 <style>

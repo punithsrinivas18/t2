@@ -1,5 +1,5 @@
 <template>
-  <form class="container" @submit="signup">
+  <form class="container" @submit.prevent="signup">
       {{error}}
       <div class="field">
         <p class="control has-icons-left has-icons-right">
@@ -26,19 +26,6 @@
         </div>
 
         <div class="field">
-        <p class="control has-icons-left has-icons-right">
-            <input class="input" type="name" placeholder="User Name" v-model="username" >
-            <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-            </span>
-            <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-            </span>
-        </p>
-        </div>
-
-
-        <div class="field">
         <p class="control has-icons-left">
             <input class="input" type="password" placeholder="Password" v-model="password">
             <span class="icon is-small is-left">
@@ -49,17 +36,16 @@
 
         <div class="field">
         <p class="control has-icons-left">
-            <input class="input" type="password" placeholder="Confirm Password" v-model="confirmpassword">
+            <input class="input" type="confirm password" placeholder="Cofirm Password" v-model="confirmpassword">
             <span class="icon is-small is-left">
             <i class="fas fa-lock"></i>
             </span>
         </p>
         </div>
-        
         <div class="field">
         <p class="control">
             <button class="button is-success">
-            Signup
+            Login
             </button>
         </p>
         </div>
@@ -67,32 +53,29 @@
 </template>
 
 <script>
-//import { Login } from "../models/Users";
+import { SignUp} from "../models/users1";
 
 export default {
     data(){
         return {
             email: '',
+            name: '',
             password: '',
+            confirmpassword: '',
             error: ''
         }
     },
     methods: {
-        
-             signup() {
-                if(this.input.username != "" && this.input.password != "") {
-                    if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
-                        this.$emit("authenticated", true);
-                        this.$router.replace({ name: "secure" });
-                    } else {
-                        console.log("The username and / or password is incorrect");
-                    }
-                } else {
-                    console.log("A username and password must be present");
-                }
+        signup(){
+            try {
+                SignUp(this.email, this.name, this.password, this.confirmpassword );
+                this.$router.push('/login');
+            } catch (error) {
+                this.error = error;
             }
         }
     }
+}
 </script>
 
 <style>
