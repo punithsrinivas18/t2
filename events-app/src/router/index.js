@@ -21,6 +21,16 @@ export default new Router({
       component: () => import('../views/About.vue')
     },
     {
+      path: '/dietplan',
+      name: 'dietplan',
+      component: () => import('../views/dietplan.vue')
+    },
+    {
+      path: '/workinghours',
+      name: 'workinghours',
+      component: () => import('../views/workinghours.vue')
+    },
+    {
       path: '/SignUp',
       name: 'SignUp',
       component: () => import('../views/SignUp.vue')
