@@ -7,9 +7,8 @@
           Welcome to Fitness Fight     
         </h1>
           <div class="button-block">
-          <button class="button is-xl is-dark">
-          <strong>Let's Begin</strong>
-          </button>
+          <a href="/login" class="button is-xl is-dark">Let's Begin</a>
+        
         </div>
       </div>
     </div>

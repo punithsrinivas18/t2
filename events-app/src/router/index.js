@@ -28,6 +28,21 @@ export default new Router({
     
     
     { path: '/login', name: 'login', component: Login },
+    {
+      path: '/dietplan',
+      name: 'dietplan',
+      component: () => import('../views/dietplan.vue')
+    },
+    {
+      path: '/exercises',
+      name: 'exercises',
+      component: () => import('../views/exercises.vue')
+    },
+    {
+      path: '/workinghours',
+      name: 'workinghours',
+      component: () => import('../views/workinghours.vue')
+    },
     
    
     
