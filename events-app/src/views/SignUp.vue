@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { SignUp} from "../models/Users1";
+import { signup} from "../models/Users1";
 
 export default {
     data(){
@@ -59,8 +59,8 @@ export default {
     methods: {
         signup(){
             try {
-                SignUp(this.email, this.name, this.password, this.confirmpassword );
-                this.$router.push('/login');
+                signup(this.email, this.name, this.password, this.confirmpassword );
+                this.$router.push('/');
             } catch (error) {
                 this.error = error;
             }
