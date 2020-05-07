@@ -31,6 +31,11 @@ export default new Router({
       component: () => import('../views/workinghours.vue')
     },
     {
+      path: '/exercises',
+      name: 'exercises',
+      component: () => import('../views/exercises.vue')
+    },
+    {
       path: '/SignUp',
       name: 'SignUp',
       component: () => import('../views/SignUp.vue')

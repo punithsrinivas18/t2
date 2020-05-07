@@ -18,4 +18,3 @@ export function signup(email, name, password) {
 
     return CurrentUser = use;
 }
- 
