@@ -24,7 +24,7 @@ export default {
    methods: {
     async submit() {
       try {
-        const m = await addsleep(this.data);
+        const m = await getsleep_time(this.data);
         this.newsleep_time = m;
         toastr.success("You've Successfully added your sleep time");
       } catch (error) {

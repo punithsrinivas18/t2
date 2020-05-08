@@ -1,11 +1,11 @@
 import { api } from './api';
 
-export async function getWorkouts() {
+export async function getWorkout() {
   const x = await api('Workouts');
   return x;
 }
 
-export async function addWorkouts(data) {
+export async function addWorkout(data) {
   const x = await api('Workouts', data);
   return x;
 }
