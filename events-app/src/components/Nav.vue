@@ -17,6 +17,8 @@
       <router-link to="/dietplan" class="navbar-item">Diet Plan</router-link>
       <router-link to="/workinghours" class="navbar-item">Working Hours</router-link>
       <router-link to="/exercises" class="navbar-item">Exercises</router-link>
+      <router-link to="/sleep_time" class="navbar-item"> SleepTrack</router-link>
+      <router-link to="/MyWorkouts" class="navbar-item"> workouts</router-link>
       <router-link to="/help" class="navbar-item">Help</router-link>
 
     </div>

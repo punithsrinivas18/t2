@@ -2,6 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
+import AddExercise from '../views/AddExercise.vue';
+import MyWorkouts from '../views/MyWorkouts.vue';
+import exercises from '../views/exercises.vue';
+import sleep_time from '../views/sleep_time.vue';
+import AddWorkout from '../views/AddWorkout.vue';
+//import { Globals } from '@/models/api';
 
 
 Vue.use(Router)
@@ -31,14 +37,35 @@ export default new Router({
       component: () => import('../views/workinghours.vue')
     },
     {
-      path: '/exercises',
-      name: 'exercises',
-      component: () => import('../views/exercises.vue')
+      path: '/MyWorkouts',
+      name: 'MyWorkouts',
+      component: MyWorkouts
     },
     {
       path: '/SignUp',
       name: 'SignUp',
       component: () => import('../views/SignUp.vue')
+    },
+    {
+      path: '/exercises',
+      name: 'exercises',
+      component: exercises
+    },
+    
+    {
+      path: '/sleep_time',
+      name: 'sleep_time',
+      component: sleep_time
+    },
+    {
+      path: '/AddExercise',
+      name: 'AddExercise',
+      component: AddExercise
+    },
+    {
+      path: '/addWorkout',
+      name: 'AddWorkout',
+      component: AddWorkout
     },
     
     

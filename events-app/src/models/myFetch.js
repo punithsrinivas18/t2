@@ -1,4 +1,4 @@
-import { CurrentUser } from "./Users1";
+import { CurrentUser } from "./users";
 
 const api_root = "http://localhost:3000";
 

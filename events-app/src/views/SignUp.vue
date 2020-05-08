@@ -1,74 +1,82 @@
 <template>
-  <form class="container" @submit.prevent="signup">
-      {{error}}
-      <div class="field">
-        <p class="control has-icons-left has-icons-right">
-            <input class="input" type="email" placeholder="Email" v-model="email" >
+    <section>
+        <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="First Name Last Name" v-model="name">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Username</label>
+            <div class="control has-icons-left has-icons-right">
+                <input class="input is-success" type="text" placeholder="myusername" v-model="username">
             <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
+                <i class="fas fa-user"></i>
             </span>
             <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
+                <i class="fas fa-check"></i>
             </span>
-        </p>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left has-icons-right">
+                <input class="input is-danger" type="email" placeholder="hello@gmail.com" v-model="email">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </span>
+            </div>
         </div>
 
         <div class="field">
-        <p class="control has-icons-left has-icons-right">
-            <input class="input" type="name" placeholder="Name" v-model="name" >
-            <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-            </span>
-            <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-            </span>
-        </p>
+            <div class="control">
+            <label class="checkbox">
+            <input type="checkbox">
+                <p>I agree to the terms and conditions</p>
+            </label>
+            </div>
         </div>
-
         <div class="field">
-        <p class="control has-icons-left">
-            <input class="input" type="password" placeholder="Password" v-model="password">
-            <span class="icon is-small is-left">
-            <i class="fas fa-lock"></i>
-            </span>
-        </p>
-        </div>
+            <label class="label">Password</label>
+            <div class="control has-icons-left has-icons-right">
+                <input class="input is-success" type="text" placeholder="mypassword" v-model="password">
+                    <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </div>    
+            </div>
 
-        <div class="field">
-        <p class="control">
-            <button class="button is-success">
-            Login
-            </button>
-        </p>
+        <div class="field is-grouped">
+            <div class="control">
+            <button class="button is-link">Submit</button>
         </div>
-  </form>
+        <div class="control">
+            <button class="button is-link is-light" @click="clear">Cancel</button>
+        </div>
+        </div>
+    </section>
 </template>
 
-<script>
-import { signup} from "../models/Users1";
 
+<script>
 export default {
-    data(){
-        return {
-            email: '',
-            name: '',
-            password: '',
-            error: ''
-        }
-    },
+    data: () => ({
+        username: "",
+        email:"",
+        password: "",
+        name: ""
+    }),
     methods: {
-        signup(){
-            try {
-                signup(this.email, this.name, this.password, this.confirmpassword );
-                this.$router.push('/');
-            } catch (error) {
-                this.error = error;
-            }
+        clear () {
+            this.username="";
+            this.email="";
+            this.password="";
+            this.name="";
         }
-    }
+    }    
 }
 </script>
-
-<style>
-
-</style>
