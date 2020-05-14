@@ -6,6 +6,8 @@ import AddExercise from '../views/AddExercise.vue';
 import MyWorkouts from '../views/MyWorkouts.vue';
 import exercises from '../views/exercises.vue';
 import sleep_time from '../views/sleep_time.vue';
+//import help from '../views/help.vue'
+//import autocomplete from '../views/autocomplete.vue';
 import AddWorkout from '../views/AddWorkout.vue';
 //import { Globals } from '@/models/api';
 
@@ -25,6 +27,11 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: () => import('../views/About.vue')
+    },
+    {
+      path: '/help',
+      name: 'help',
+      component: () => import('../views/help.vue')
     },
     {
       path: '/dietplan',
